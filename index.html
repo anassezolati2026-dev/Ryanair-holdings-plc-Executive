@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Team - Ryanair Holdings Plc</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* Stili Generali */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa; /* Sfondo generale molto chiaro */
+        }
+        
+        /* Hero Section (Sfondo scuro/immagine per il titolo) */
+        .hero-section-management {
+            /* USA LA TUA IMMAGINE DI SFONDO QUI */
+            background-image: url('management_bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            min-height: 350px;
+            color: white;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        /* Overlay per far risaltare il testo */
+        .hero-section-management::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Overlay scuro */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-shadow {
+            /* Ombreggiatura leggera per le schede dei profili */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Colori primari Ryanair */
+        .bg-ryanair-blue { background-color: #003580; }
+        .text-ryanair-yellow { color: #FFD400; }
+    </style>
+</head>
+<body>
+
+    <header class="bg-ryanair-blue text-white py-4 px-6 flex justify-between items-center shadow-lg sticky top-0 z-50">
+        <div class="flex items-center gap-4">
+            <a href="index.html"> 
+                <img src="vediamo ragazzi.png" alt="Main Logo" class="h-10 w-auto" style="height: 50px;" />
+            </a>
+            <span class="text-xl font-bold">RYANAIR HOLDINGS PLC</span>
+        </div>
+        
+        <nav class="hidden md:flex gap-6 text-lg font-medium">
+            <a href="index.html" class="hover:text-yellow-400 transition duration-300">Home</a>
+            <a href="cabincrew.html" class="hover:text-yellow-400 transition duration-300">Cabin Crew</a>
+            <a href="management_team.html" class="text-yellow-400 font-extrabold border-b-2 border-yellow-400">Management Team</a>
+            <a href="https://ryanair-holdings-plc-careers-roblox.vercel.app/" target="_blank" class="hover:text-yellow-400 transition duration-300">Careers Portal</a>
+        </nav>
+        
+        <button class="md:hidden text-white text-2xl">☰</button>
+    </header>
+
+    <div class="hero-section-management border-b-4 border-yellow-400">
+        <div class="hero-content max-w-7xl mx-auto">
+            <p class="text-sm uppercase tracking-widest opacity-80 mb-2">HOME / MANAGEMENT</p>
+            <h1 class="text-6xl font-extrabold tracking-tight">
+                Executive Leadership
+            </h1>
+        </div>
+    </div>
+
+    <main class="max-w-6xl mx-auto p-6 md:p-12">
+        <h2 class="text-4xl font-extrabold text-gray-800 mb-10 text-center">
+            Key Leadership
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
+            <div class="flex items-start gap-6 bg-white p-6 rounded-lg card-shadow hover:shadow-xl transition duration-300">
+                <img src="noah_holder.jpg" alt="Noah Holder" class="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 flex-shrink-0">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Noah Holder</h3>
+                    <p class="text-sm text-gray-600 mb-3">Chief Executive Officer (CEO)</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Noah Holder guida le decisioni strategiche del gruppo, supervisionando tutte le operazioni e le iniziative di crescita, assicurando il rispetto degli obiettivi aziendali e mantenendo l'impegno verso l'efficienza e la soddisfazione del cliente.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-6 bg-white p-6 rounded-lg card-shadow hover:shadow-xl transition duration-300">
+                <img src="francesco.jpg" alt="Francesco" class="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 flex-shrink-0">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Francesco</h3>
+                    <p class="text-sm text-gray-600 mb-3">Chief Executive Officer</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        Francesco è responsabile dell'esecuzione quotidiana delle strategie aziendali. Collabora strettamente con il consiglio di amministrazione per implementare la visione a lungo termine e garantire performance finanziarie sostenibili.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="mt-12 flex justify-center">
+            <div class="flex items-start gap-6 bg-white p-6 rounded-lg card-shadow hover:shadow-xl transition duration-300 max-w-xl w-full">
+                <img src="marco.jpg" alt="Marco" class="w-28 h-28 object-cover rounded-full border-4 border-yellow-400 flex-shrink-0">
+                <div>
+                    <h3 class="text-xl font-bold text-gray-800">Marco</h3>
+                    <p class="text-sm text-gray-600 mb-3">Chief Operating Officer (COO)</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        In qualità di COO, Marco supervisiona le operazioni di volo, la manutenzione e la logistica. È focalizzato sul miglioramento continuo dei processi operativi per massimizzare l'efficienza e mantenere i più alti standard di sicurezza e puntualità.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-ryanair-blue text-white pt-10 pb-4 mt-12 border-t-4 border-yellow-400">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="mb-10 flex flex-wrap gap-8 items-center justify-center border-b border-yellow-400 pb-8">
+                <img src="logo_buzz.png" alt="Buzz" class="h-8"/>
+                <img src="logo_lauda.png" alt="Lauda" class="h-8"/>
+                <img src="logo_malta_air.png" alt="Malta Air" class="h-8"/>
+                <img src="logo_ryanair.png" alt="Ryanair" class="h-8"/>
+            </div>
+
+            <div class="text-center text-sm text-gray-300">
+                <p>&copy; 2025 © Ryanair Group. All rights reserved.</p>
+                <p class="mt-1">
+                    <a href="#" class="hover:text-yellow-400 mx-2">Privacy Policy</a> | 
+                    <a href="#" class="hover:text-yellow-400 mx-2">Terms & Conditions</a> |
+                    <a href="https://ryanair-holdings-plc-roblox.vercel.app/" class="hover:text-yellow-400 mx-2">Main Site (Vercel)</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
