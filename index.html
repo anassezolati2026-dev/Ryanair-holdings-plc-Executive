@@ -6,7 +6,7 @@
     <title>Group Executive Biographies - Ryanair Holdings Plc</title>
     
     <meta name="description" content="Official biographies and profiles of the Ryanair Group Executive Leadership Team. Detailed career history and responsibilities.">
-    <meta name="keywords" content="Ryanair, Biographies, Leadership, Executive Team, Corporate Governance, Management structure">
+    <meta name="keywords" content="Ryanair, Biographies, Leadership, Executive Team, Corporate Governance, Management structure, Executive Officers">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://your-domain.com/management_team.html">
     
@@ -42,21 +42,44 @@
             font-weight: 500;
         }
 
-        /* Hero Section - Clean Header Style */
+        /* Hero Section - Clean Header Style con Immagine di Sfondo */
         .hero-clean-header {
-            background-color: #e6e9ed; /* Light gray background for contrast */
-            min-height: 250px;
+            /* Uso dell'immagine di sfondo richiesta */
+            background-image: url('helloboy.png'); 
+            background-size: cover;
+            background-position: center 60%; 
+            min-height: 400px; 
             display: flex;
-            align-items: center;
+            align-items: flex-end; 
             padding: 3rem 0;
+            position: relative;
+            z-index: 10;
             border-bottom: 5px solid #FFD400;
         }
 
-        /* Title Typography */
+        /* Overlay per la leggibilità del testo (scurisce l'immagine) */
+        .hero-clean-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Gradiente scuro dal basso (per il testo) verso l'alto (per lo sfondo) */
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+            z-index: 1;
+        }
+
+        /* Title Typography all'interno dell'overlay */
+        .main-title, .hero-clean-header p {
+            position: relative;
+            z-index: 2;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombra per leggibilità */
+        }
         .main-title {
-            font-size: 3.5rem; /* Large and impactful */
+            font-size: 3.5rem;
             font-weight: 700;
-            color: #003580;
+            color: #ffffff; /* Testo Bianco */
             line-height: 1.1;
         }
 
@@ -79,14 +102,13 @@
             object-fit: cover;
             border-radius: 50%;
             border: 5px solid #FFD400;
-            box-shadow: 0 0 0 2px #003580; /* Blue outer ring for subtle branding */
+            box-shadow: 0 0 0 2px #003580;
         }
         
         /* Utility for Text Readability */
         .text-muted { color: #6b7280; }
         .text-strong { color: #1f2937; }
         
-        /* END: Custom CSS Block */
     </style>
 </head>
 <body class="antialiased">
@@ -112,15 +134,15 @@
     </header>
     <div class="hero-clean-header">
         <div class="max-w-7xl mx-auto px-6 w-full">
-            <p class="text-xs uppercase tracking-widest text-muted mb-2" aria-label="Page location">
-                <a href="index.html" class="hover:text-ryanair-blue transition duration-150">HOME</a> / 
-                <a href="#" class="hover:text-ryanair-blue transition duration-150">GOVERNANCE</a> / 
+            <p class="text-xs uppercase tracking-widest text-white mb-2" aria-label="Page location">
+                <a href="index.html" class="hover:text-yellow-400 transition duration-150">HOME</a> / 
+                <a href="#" class="hover:text-yellow-400 transition duration-150">GOVERNANCE</a> / 
                 EXECUTIVE BIOGRAPHIES
             </p>
-            <h1 class="main-title" role="heading" aria-level="1">
+            <h1 class="main-title text-white" role="heading" aria-level="1">
                 Executive Leadership Biographies
             </h1>
-            <p class="text-lg text-gray-600 mt-4 max-w-3xl">
+            <p class="text-lg text-gray-200 mt-4 max-w-3xl">
                 Detailed professional backgrounds and responsibilities of the senior management team guiding the Ryanair Group.
             </p>
         </div>
@@ -328,7 +350,6 @@
         // Polyfill Check for older browsers (extended line count)
         if (!window.fetch) {
             console.warn('Fetch API not supported. Loading polyfill.');
-            // This placeholder is kept here to ensure the line count remains high.
         }
         
         // Data Structure Validation Function (Expanded)
